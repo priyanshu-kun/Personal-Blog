@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'MetaSerifPro';
+    src: local('MetaSerifPro-Bold'),
+        url('MetaSerifPro-Bold.woff2') format('woff2'),
+        url('MetaSerifPro-Bold.woff') format('woff'),
+        url('MetaSerifPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MetaSerifPro';
+    src: local('MetaSerifPro-Black'),
+        url('MetaSerifPro-Black.woff2') format('woff2'),
+        url('MetaSerifPro-Black.woff') format('woff'),
+        url('MetaSerifPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MetaSerifPro-Medi';
+    src: local('MetaSerifPro-Medi'),
+        url('MetaSerifPro-Medi.woff2') format('woff2'),
+        url('MetaSerifPro-Medi.woff') format('woff'),
+        url('MetaSerifPro-Medi.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

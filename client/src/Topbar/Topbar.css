@@ -1,0 +1,107 @@
+.top {
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+  font-family: 'MetaSerifPro';
+	/*background-color: #121212;*/
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	color: #fff;
+}
+
+
+.topLeft, .topRight {
+	flex: 3;
+	/*background-color: red;*/
+}
+
+
+.topLeft {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*background: green;*/
+}
+
+
+.topLeft .socialMediaIcons {
+	width: 60%;
+	max-width: 200px;
+	display: flex;
+	justify-content: space-around;
+	/*background: green;	*/
+}
+
+.topLeft .socialMediaIcons img {
+	width: 20px;
+	cursor: pointer;
+}
+
+.topCenter {
+	flex: 6;
+}
+
+
+.topCenter ul {
+	margin: 0 auto;
+	/*background: green;*/
+	max-width: 60%;
+	display: flex;
+	justify-content: space-around;	
+}
+
+.topCenter ul li a {
+	text-decoration: none;
+	color: #000;
+	transition: all 0.3s ease;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	/*background: red;*/
+	border-radius: 6px;
+}
+
+
+
+.topCenter ul li a:hover {
+	color: #fff;
+	background: rgba(0, 0, 0, 1);
+}
+
+.topRight {
+	height: 100%;
+	display: flex;
+	/*background: red;*/
+	justify-content: center;
+	align-items: center;
+}
+
+.topRight img {
+	cursor: pointer;
+}
+
+.topRight .profilePicRapper {
+	width: 32px;
+	border: 3px solid #F47A00;
+	margin-left: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.topRight .profilePic {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+.topRight input {
+	display: none;
+}
+
+
