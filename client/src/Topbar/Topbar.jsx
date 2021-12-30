@@ -13,13 +13,21 @@ export default function Topbar() {
     <div className="top">
       <div className="topLeft">
         <div className="socialMediaIcons">
-          <img src={Facebook} alt="Facebook" />
-          <img src={Instagram} alt="Instagram" />
-          <img src={Twitter} alt="Twitter" />
-          <img src={Linkdlin} alt="Linkdlin" />
+          <div className="socialIconsCover">
+            <img src={Facebook} alt="Facebook" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Instagram} alt="Instagram" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Twitter} alt="Twitter" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Linkdlin} alt="Linkdlin" />
+          </div>
         </div> 
       </div>
-      <div className="topCenter">
+      <nav className="topCenter">
         <ul>
           <li className="topListItem"><a href="">Home</a></li>
           <li className="topListItem"><a href="">About</a></li>
@@ -27,14 +35,15 @@ export default function Topbar() {
           <li className="topListItem"><a href="">Write</a></li>
           <li className="topListItem"><a href="">Logout</a></li>
         </ul>
-      </div>
+      </nav>
       <div className="topRight">
-        <input type="text" placeholder="Search for Something?"/>
-        <img src={Search} className="searchIcon" alt="Search" />
+        <label htmlFor="searchBar">Search for Something?</label>
+        <input id="searchBar" type="text" placeholder="Search for Something?"/>
+        <img src={Search} className="searchIcon" alt="Search bar" />
         <div className="profilePicRapper" >
             <img className="profilePic" src={ProfilePic} alt="profile" />
           </div>
       </div>
-    </div>
+    </div> 
   )
 }
