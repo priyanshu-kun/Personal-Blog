@@ -1,6 +1,6 @@
 import React from "react"
-import HeaderImage from "../assets/images/woman.png"
-import IconDown from "../assets/icons/chevron-down.svg"
+import HeaderImage from "../../assets/images/woman.png"
+import IconDown from "../../assets/icons/chevron-down.svg"
 import "./Header.css";
 
 export default function Header() {

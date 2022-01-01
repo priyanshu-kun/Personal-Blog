@@ -1,10 +1,10 @@
 import React from "react";
-import Facebook from "../assets/icons/facebook.svg"
-import Instagram from "../assets/icons/instagram.svg"
-import Twitter from "../assets/icons/twitter.svg"
-import Search from "../assets/icons/search.svg"
-import Linkdlin from "../assets/icons/linkedin.svg"
-import ProfilePic from "../assets/images/images.jpeg"
+import Facebook from "../../assets/icons/facebook.svg"
+import Instagram from "../../assets/icons/instagram.svg"
+import Twitter from "../../assets/icons/twitter.svg"
+import Search from "../../assets/icons/search.svg"
+import Linkdlin from "../../assets/icons/linkedin.svg"
+import ProfilePic from "../../assets/images/images.jpeg"
 import "./Topbar.css"
 
 
