@@ -11,6 +11,7 @@ function Post() {
                </div>
                <div className="postContent">
                    <h1>😊 How to ace in life?</h1>
+                   <hr style={{margin: "0 0 10px 0", width: "100%"}} />
                   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio officia eligendi esse neque? Sequi, consequatur?</p> 
                </div>
                <div className="postDate">

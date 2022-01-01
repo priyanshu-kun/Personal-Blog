@@ -1,12 +1,14 @@
 import './App.css';
 import Home from './Pages/Home/Home';
 import Topbar from './components/Topbar/Topbar';
+import Single from "./Pages/Single/Single"
+import Write from "./Pages/Write/Write"
 
 function App() {
   return (
     <div className="App">
         <Topbar />
-        <Home />        
+        <Write />        
     </div>
   );
 }

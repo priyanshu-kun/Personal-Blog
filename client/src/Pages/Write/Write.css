@@ -1,0 +1,140 @@
+.write {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+.write h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+.writeArea {
+    margin-top: 30px;
+}
+
+
+
+.writeActionsBtns {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.writeActionArea {
+    position: relative;
+    padding: 80px 0 10px 0;
+}
+
+.writeActionArea button {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    left: 60px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: 'MetaSerifPro';
+    transition: all 0.3s ease;
+}
+
+
+
+.writeActionArea button:hover {
+       background-color: rgb(248, 248, 248); 
+}
+
+
+.writeActionArea hr {
+    width: 100%;
+    margin: 0;
+}
+
+.writeActionArea input {
+    width: calc(100% - 34px);
+    border: none;
+    height: 60px;
+    padding-left: 30px;
+    font-family: 'MetaSerifPro';
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+
+.writeActionArea input::placeholder {
+    font-family: 'MetaSerifPro';
+    font-weight: 900;
+    font-size: 1.6rem;
+    
+}
+
+
+.writeActionArea textarea {
+    width: calc(100% - 32px);
+    border: none;
+    height: 300px;
+    font-family: 'MetaSerifPro';
+    font-size: 1.2rem;
+    padding: 10px 0 0 30px;
+}
+
+
+.writeActionArea textarea::placeholder {
+    letter-spacing: 2px;
+    font-family: 'MetaSerifPro';
+    font-size: 1.2rem;
+}
+
+
+.editAndPreview button {
+    background: none;
+    border: none;
+    font-family: 'MetaSerifPro';
+    font-size: 1.2rem;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.customUnderline {
+    position: relative;
+}
+
+
+.customUnderline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+}
+
+
+.publishAndDiscard button:first-child,.publishAndDiscard button:last-child {
+     background: rgb(95, 197, 0);
+    border: none;
+    font-family: 'MetaSerifPro';
+    font-size: 1rem;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid rgb(95, 197, 0);
+}
+
+
+.publishAndDiscard button:last-child {
+    background: none;    
+    color: rgb(255, 104, 104);
+    border: 1px solid rgb(255, 104, 104);
+}
