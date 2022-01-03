@@ -1,8 +1,9 @@
 .Post {
     width: 485px;
     height: 480px;
-    border: 3px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    background: rgb(248, 248, 248);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

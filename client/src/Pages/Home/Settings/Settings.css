@@ -1,0 +1,235 @@
+.settings {
+    display: flex;
+}
+
+.settingsWrapper {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.settingHeading {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+
+.settingHeading span:first-child {
+    text-decoration: underline;
+}
+
+
+.settingContent {
+	width: 400px;
+	min-height: 430px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: rgb(248, 248, 248);
+	border-radius: 10px;
+}
+
+
+
+.displayProfile {
+    flex: 1;
+    height: 100%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.displayProfile div:first-child {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.displayProfile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+.displayProfile .username {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+
+.displayProfile .joiningInfo {
+    font-size: 0.8rem;
+    margin: 3px 0 0 0;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+
+.displayProfile .editBtn {
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 6px;
+    background: #000;
+    border: none;
+    color: #fff;
+    font-family: 'MetaSerifPro';
+    cursor: pointer;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+
+.displayProfile .editBtn:hover {
+    background: rgb(49, 49, 49);
+}
+
+
+.editArea {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1;
+	background: #fff;
+}
+
+
+.editFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    margin-top: 20px;
+}
+
+
+
+.editFields > div {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	height: 100%;
+	width: 80%;
+	/* padding-top: 20px; */
+}
+
+
+
+.editFields label {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+}
+
+
+.editFields input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 42px;
+    width: calc(100% - 30px);
+    border-radius: 6px;
+    padding: 0 15px;
+    font-family: 'MetaSerifPro';
+}
+
+
+.editFields input::placeholder {
+    font-weight: bold;
+    color: rgb(114, 114, 114);
+}
+
+.activeEditFields {
+    display: flex;
+    width: 800px;
+    transition: width 0.3s ease;
+}
+
+.deactiveEditFields {
+    width: 400px;
+    display: block;
+    transition: width 0.3s ease;
+}
+
+
+.dangerArea {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	padding-top: 10px;
+	align-items: center;
+	justify-content: flex-end;
+	/* padding-right: 145px; */
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding-bottom: 10px;
+}
+
+
+.dangerArea button {
+    height: 80%;
+    /* width: 100px; */
+    padding: 0 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'MetaSerifPro';
+    font-weight: bold;
+}
+
+
+/* .dangerArea button:first-child {
+    background: #000;
+    color: #fff;
+    padding: 0 20px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.dangerArea button:first-child:hover {
+    background: rgb(49, 49, 49);
+} */
+
+
+
+.dangerArea button:first-child {
+    background: transparent;
+    color: rgb(255, 0, 0);
+    border: 1px solid red;
+    width: 160px;
+    margin-right: 40px;
+}
+
+
+.updateProfile {
+	width: 80%;
+	height: 53px;
+	border: none;
+	background: #000;
+	border-radius: 6px;
+	cursor: pointer;
+	color: #fff;
+	display: block;
+	/* margin: 20px auto 0 auto; */
+	font-family: 'MetaSerifPro';
+	font-weight: bold;
+	margin: -20px auto 0 auto;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.updateProfile:hover {
+    background: rgb(49, 49, 49);
+}
