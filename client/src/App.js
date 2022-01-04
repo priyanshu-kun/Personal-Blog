@@ -8,7 +8,7 @@ import Login from './Pages/Home/Login/Login';
 import Register from './Pages/Home/Register/Register';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
   Link
 } from "react-router-dom";
@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
         <Topbar />
-        <Routes>
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -46,7 +46,7 @@ function App() {
           <Route path="/post/:post_id">
             <Single/>
           </Route>
-        </Routes>
+        </Switch>
     </Router>
   );
 }

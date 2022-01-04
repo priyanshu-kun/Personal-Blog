@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom"
 import "./Login.css"
 
 function Login() {
@@ -16,7 +16,7 @@ function Login() {
                     </div>
                    <button className="submitFormBtn">Login</button> 
                 </form>
-                <p className="linkToDffAuthScreen">Don't have an account? <a href="#">Register</a></p>
+                <p className="linkToDffAuthScreen">Don't have an account? <Link to="/register">Register</Link></p>
             </div>
         </div>
     )

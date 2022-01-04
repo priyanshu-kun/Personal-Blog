@@ -1,4 +1,7 @@
 .Post {
+
+    text-decoration: none;
+    color: inherit;
     width: 485px;
     height: 480px;
     border: 1px solid rgba(0, 0, 0, 0.1);

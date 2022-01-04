@@ -61,13 +61,19 @@
     /* padding-bottom: 6px; */
     font-size: 1rem;
     display: block;
+    outline: none;
     margin-top: 3px;
 }
 
 
+.loginForm form input:focus {
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px black ;
+}
+
+
 .submitFormBtn {
-    /* width: 100%; */
-    width: 300px;
+    width: 100%;
 	height: 53px;
 	border: none;
 	background: #000;
@@ -77,9 +83,11 @@
 	display: block;
 	/* margin: 20px auto 0 auto; */
 	font-family: 'MetaSerifPro';
+    font-size: 1rem;
 	font-weight: bold;
 	margin: -6px auto 0 auto;
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 

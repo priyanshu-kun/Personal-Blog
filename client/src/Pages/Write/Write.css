@@ -13,7 +13,7 @@
 
 
 .writeArea {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 
@@ -64,6 +64,8 @@
     font-size: 1.6rem;
     outline: none;
 }
+
+
 
 
 .writeActionArea input::placeholder {

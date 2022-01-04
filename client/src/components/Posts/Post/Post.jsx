@@ -1,8 +1,9 @@
 import "./Post.css";
+import {Link} from "react-router-dom"
 
 function Post() {
     return (
-        <div className="Post">
+        <Link to="/post/1" className="Post">
            <img src="https://images.pexels.com/photos/10484063/pexels-photo-10484063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post title image" /> 
            <div className="postInfo">
                <div className="postCate">
@@ -18,7 +19,7 @@ function Post() {
                📆 <span>1 Jan 2022</span> 
                </div>
            </div>
-        </div>
+        </Link>
     )
 }
 

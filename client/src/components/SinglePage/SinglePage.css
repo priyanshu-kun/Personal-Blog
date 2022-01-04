@@ -22,9 +22,10 @@
 }
 
 
-.timeAndShareLinks span:first-child span:first-child {
+.timeAndShareLinks span:first-child a {
     font-weight: 900;
     margin-right: 6px;
+    color: #000;
 }
 
 

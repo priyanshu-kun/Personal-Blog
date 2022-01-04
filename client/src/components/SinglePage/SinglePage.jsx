@@ -2,12 +2,13 @@ import "./SinglePage.css"
 import Edit from "../../assets/icons/edit.svg"
 import HorizontalDots from "../../assets/icons/more-horizontal.svg"
 import Trash from "../../assets/icons/trash-2.svg"
+import {Link} from "react-router-dom"
 
 function SinglePage() {
     return (
         <div className="SinglePage">
             <div className="timeAndShareLinks">
-                <span><span>Jhon Doe,</span>2 Jan 2022 <span>8 min to read</span></span> 
+                <span><Link to="/settings">Jhon Doe,</Link>2 Jan 2022 <span>8 min to read</span></span> 
                 <div className="postActions">
                     <button><img src={Edit} alt="edit icon" /></button>
                     <button><img src={Trash} alt="Trash" /></button>

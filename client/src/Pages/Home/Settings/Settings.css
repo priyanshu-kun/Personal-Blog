@@ -133,6 +133,7 @@
     margin-top: 10px;
     margin-bottom: 3px;
     margin-left: 6px;
+    font-size: 0.8rem;
 }
 
 
@@ -142,8 +143,18 @@
     width: calc(100% - 30px);
     border-radius: 6px;
     padding: 0 15px;
+    outline: none;
+    font-size: 1rem;
     font-family: 'MetaSerifPro';
 }
+
+
+.editFields input:focus {
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px black ;
+}
+
+
 
 
 .editFields input::placeholder {
@@ -210,6 +221,12 @@
     border: 1px solid red;
     width: 160px;
     margin-right: 40px;
+    transition: all 0.3s ease;
+}
+
+
+.dangerArea button:first-child:hover {
+    opacity: 0.6;
 }
 
 
@@ -224,6 +241,7 @@
 	display: block;
 	/* margin: 20px auto 0 auto; */
 	font-family: 'MetaSerifPro';
+    font-size: 1rem;
 	font-weight: bold;
 	margin: -20px auto 0 auto;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);

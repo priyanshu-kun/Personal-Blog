@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Facebook from "../../assets/icons/facebook.svg"
 import Instagram from "../../assets/icons/instagram.svg"
 import Twitter from "../../assets/icons/twitter.svg"
 import Search from "../../assets/icons/search.svg"
+import X from "../../assets/icons/x.svg"
 import Linkdlin from "../../assets/icons/linkedin.svg"
 import ProfilePic from "../../assets/images/images.jpeg"
+import { Link } from "react-router-dom"
 import "./Topbar.css"
 
 
 export default function Topbar() {
+
+
+  const [SearchBar, setSearchBar] = useState(false)
+
+  function handleSearchBar() {
+    setSearchBar(!SearchBar);
+  }
+
+  let user = true;
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -25,25 +37,61 @@ export default function Topbar() {
           <div className="socialIconsCover">
             <img src={Linkdlin} alt="Linkdlin" />
           </div>
-        </div> 
+        </div>
       </div>
       <nav className="topCenter">
         <ul>
-          <li className="topListItem"><a href="">Home</a></li>
-          <li className="topListItem"><a href="">About</a></li>
-          <li className="topListItem"><a href="">Contact</a></li>
-          <li className="topListItem"><a href="">Write</a></li>
-          <li className="topListItem"><a href="">Logout</a></li>
+          <li className="topListItem">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/">About</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/">Contact</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/write">Write</Link>
+          </li>
+          <li className="topListItem">
+            {
+              user && (
+                <button className="logout">Log out</button>
+              )
+            }
+          </li>
         </ul>
       </nav>
       <div className="topRight">
-        <label htmlFor="searchBar">Search for Something?</label>
-        <input id="searchBar" type="text" placeholder="Search for Something?"/>
-        <img src={Search} className="searchIcon" alt="Search bar" />
-        <div className="profilePicRapper" >
-            <img className="profilePic" src={ProfilePic} alt="profile" />
-          </div>
+        {/* <label htmlFor="searchBar">Search for Something?</label> */}
+        {
+          SearchBar && (
+            <input id="searchbar" type="text" placeholder="Search..." />
+          )
+        }
+        {
+          <img onClick={handleSearchBar} src={SearchBar? X: Search} className="searchIcon" alt="Search bar" />
+        }
+        {
+          user ? (
+            <div className="profilePicRapper" >
+             <Link to="/settings">
+                <img className="profilePic" src={ProfilePic} alt="profile" />
+             </Link> 
+            </div>
+          )
+            :
+            (
+              <ul>
+                <li className="topListItem loginBtn">
+                  <Link to="/login">
+                    <button>LogIn</button>
+                  </Link>
+                </li>
+              </ul>
+            )
+        }
       </div>
-    </div> 
+    </div>
   )
 }
