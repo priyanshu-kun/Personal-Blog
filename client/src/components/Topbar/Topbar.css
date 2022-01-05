@@ -180,18 +180,20 @@
 #searchbar {
 	width: 150px;
 	position: absolute;
-	left: -13%;
+	left: -8%;
 	height: 30px;
 	padding: 3px 0 3px 20px;
 	font-family: 'MetaSerifPro';
 	font-weight: 900;
 	font-size: 0.8rem;
-	/* border: 1px solid rgba; */
-	border: 1px soild rgba();
 	border: 1px solid rgba(0,0,0,0.1);
 	outline: none;
 	border-radius: 6px;
 	transition: all 0.2s ease;
+}
+
+.additionalPadding {
+	left: -12% !important;
 }
 
 

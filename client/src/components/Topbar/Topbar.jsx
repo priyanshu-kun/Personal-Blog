@@ -66,7 +66,7 @@ export default function Topbar() {
         {/* <label htmlFor="searchBar">Search for Something?</label> */}
         {
           SearchBar && (
-            <input id="searchbar" type="text" placeholder="Search..." />
+            <input id="searchbar" className={!user && "additionalPadding"} type="text" placeholder="Search..." />
           )
         }
         {
