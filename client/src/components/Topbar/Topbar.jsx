@@ -4,6 +4,7 @@ import Instagram from "../../assets/icons/instagram.svg"
 import Twitter from "../../assets/icons/twitter.svg"
 import Search from "../../assets/icons/search.svg"
 import X from "../../assets/icons/x.svg"
+import Menu from "../../assets/icons/menu.svg"
 import Linkdlin from "../../assets/icons/linkedin.svg"
 import ProfilePic from "../../assets/images/images.jpeg"
 import { Link } from "react-router-dom"
@@ -13,10 +14,16 @@ import "./Topbar.css"
 export default function Topbar() {
 
 
-  const [SearchBar, setSearchBar] = useState(false)
+  const [SearchBar, setSearchBar] = useState(false);
+  const [Drawer,setDrawer] = useState(false);
 
   function handleSearchBar() {
     setSearchBar(!SearchBar);
+  }
+
+
+  function handleSetDrawer() {
+     setDrawer(!Drawer)
   }
 
   let user = true;
@@ -64,25 +71,22 @@ export default function Topbar() {
       </nav>
       <div className="topRight">
         {/* <label htmlFor="searchBar">Search for Something?</label> */}
+        <img onClick={handleSetDrawer} className="hamburgerMenu" src={Menu} alt="menu" />
+        <input id="searchbar" className={`searchBar ${SearchBar && "activeSearchBar"}`} type="text" placeholder="Search..." />
         {
-          SearchBar && (
-            <input id="searchbar" className={!user && "additionalPadding"} type="text" placeholder="Search..." />
-          )
-        }
-        {
-          <img onClick={handleSearchBar} src={SearchBar? X: Search} className="searchIcon" alt="Search bar" />
+          <img onClick={handleSearchBar} src={SearchBar ? X : Search} className="searchIcon" alt="Search bar" />
         }
         {
           user ? (
             <div className="profilePicRapper" >
-             <Link to="/settings">
+              <Link to="/settings">
                 <img className="profilePic" src={ProfilePic} alt="profile" />
-             </Link> 
+              </Link>
             </div>
           )
             :
             (
-              <ul>
+              <ul className="login-btn-ul">
                 <li className="topListItem loginBtn">
                   <Link to="/login">
                     <button>LogIn</button>
@@ -92,6 +96,7 @@ export default function Topbar() {
             )
         }
       </div>
+      <div className={`navigationDrawer ${Drawer && "showNavigation"}`}></div>
     </div>
   )
 }

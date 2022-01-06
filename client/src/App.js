@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
         <Topbar />
-        <Switch>
+        {/* <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -46,7 +46,7 @@ function App() {
           <Route path="/post/:post_id">
             <Single/>
           </Route>
-        </Switch>
+        </Switch> */}
     </Router>
   );
 }

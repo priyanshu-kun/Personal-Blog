@@ -6,11 +6,12 @@
 	top: 0;
 	display: flex;
 	align-items: center;
-  font-family: 'MetaSerifPro';
+	font-family: 'MetaSerifPro';
 	/*background-color: #121212;*/
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	z-index: 999999999;
 	color: #fff;
+	position: relative;
 }
 
 
@@ -31,6 +32,7 @@
 .topLeft .socialMediaIcons {
 	width: 60%;
 	max-width: 200px;
+	min-width: 150px;
 	display: flex;
 	justify-content: space-around;
 	/*background: green;	*/
@@ -59,7 +61,11 @@
 
 .topCenter {
 	flex: 6;
+	min-width: 350px;
+	/* background-color: red; */
 }
+
+
 
 
 .topCenter ul {
@@ -70,6 +76,10 @@
 	justify-content: space-around;	
 	align-items: center;
 }
+
+
+
+
 
 .topCenter ul li a {
 	text-decoration: none;
@@ -95,6 +105,7 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	/* min-width: 340px; */
 }
 
 .topRight img {
@@ -128,6 +139,11 @@
 	object-fit: contain;
 }
 
+
+
+.hamburgerMenu {
+	display: none;
+}
 
 
 .logout {
@@ -177,10 +193,10 @@
 }
 
 
-#searchbar {
-	width: 150px;
-	position: absolute;
-	left: -8%;
+.searchBar {
+	width: 0px;
+	opacity: 0;
+	margin-right: 10px;
 	height: 30px;
 	padding: 3px 0 3px 20px;
 	font-family: 'MetaSerifPro';
@@ -192,12 +208,75 @@
 	transition: all 0.2s ease;
 }
 
-.additionalPadding {
-	left: -12% !important;
-}
 
+
+
+.activeSearchBar {
+	width: 150px !important;
+	opacity: 1 !important;
+}
 
 #searchbar:focus {
 	border: 1px solid transparent;
 	box-shadow: 0 0 0 2px black ;
+}
+
+.navigationDrawer {
+	width: 100%;
+	height: 0px;
+	min-height: 0px;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	background-color: red;
+	top: 60px;	
+	left: 0;
+	transition: all 0.3s ease;
+}
+
+.showNavigation {
+	height: 300px;
+	min-height: 300px;
+	opacity: 1;
+	pointer-events: all;
+}
+
+@media screen and (max-width: 1080px){
+	.topCenter ul {
+		/* background-color: orange; */
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.topLeft  {
+		display: none;
+	}	
+	.top {
+		justify-content: space-around;
+	}
+	.topCenter {
+		flex: 0;
+	}
+	.topRight {
+		/* background-color: orange; */
+		flex: 0;
+	}
+	#searchbar,.searchIcon,.profilePicRapper,.login-btn-ul {
+		display: none !important;
+	}
+	.hamburgerMenu {
+		display: block;
+	}
+}
+
+
+@media screen and (max-width: 460px){
+	.top {
+		justify-content: center;
+	}
+	.topCenter {
+		display: none;
+	}
 }
