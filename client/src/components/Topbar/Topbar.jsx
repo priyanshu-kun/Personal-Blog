@@ -15,7 +15,7 @@ export default function Topbar() {
 
 
   const [SearchBar, setSearchBar] = useState(false);
-  const [Drawer,setDrawer] = useState(false);
+  const [Drawer, setDrawer] = useState(false);
 
   function handleSearchBar() {
     setSearchBar(!SearchBar);
@@ -23,7 +23,7 @@ export default function Topbar() {
 
 
   function handleSetDrawer() {
-     setDrawer(!Drawer)
+    setDrawer(!Drawer)
   }
 
   let user = true;
@@ -73,9 +73,7 @@ export default function Topbar() {
         {/* <label htmlFor="searchBar">Search for Something?</label> */}
         <img onClick={handleSetDrawer} className="hamburgerMenu" src={Menu} alt="menu" />
         <input id="searchbar" className={`searchBar ${SearchBar && "activeSearchBar"}`} type="text" placeholder="Search..." />
-        {
-          <img onClick={handleSearchBar} src={SearchBar ? X : Search} className="searchIcon" alt="Search bar" />
-        }
+        <img onClick={handleSearchBar} src={SearchBar ? X : Search} className="searchIcon" alt="Search bar" />
         {
           user ? (
             <div className="profilePicRapper" >
@@ -96,7 +94,67 @@ export default function Topbar() {
             )
         }
       </div>
-      <div className={`navigationDrawer ${Drawer && "showNavigation"}`}></div>
+      <div className={`navigationDrawer ${Drawer && "showNavigation"}`}>
+        <div className="mobileNavbarHeading">
+          <input className={`searchBar mobileSearchBar `} type="text" placeholder="Search..." />
+          {
+            user ? (
+              <div className="mobileProfileRappper" >
+                <Link to="/settings">
+                  <img className="profilePic" src={ProfilePic} alt="profile" />
+                </Link>
+              </div>
+            )
+              :
+              (
+                <ul className="">
+                  <li className="topListItem loginBtn">
+                    <Link to="/login">
+                      <button>LogIn</button>
+                    </Link>
+                  </li>
+                </ul>
+              )
+          }
+        </div>
+        <div className=" mobileNavbarSocialIcons">
+          <div className="socialIconsCover">
+            <img src={Facebook} alt="Facebook" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Instagram} alt="Instagram" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Twitter} alt="Twitter" />
+          </div>
+          <div className="socialIconsCover">
+            <img src={Linkdlin} alt="Linkdlin" />
+          </div>
+        </div>
+        <nav className="mobileNavbarNavLinks">
+          <ul>
+            <li className="topListItem">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="topListItem">
+              <Link to="/">About</Link>
+            </li>
+            <li className="topListItem">
+              <Link to="/">Contact</Link>
+            </li>
+            <li className="topListItem">
+              <Link to="/write">Write</Link>
+            </li>
+            <li className="topListItem">
+              {
+                user && (
+                  <button className="logout">Log out</button>
+                )
+              }
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }
