@@ -94,7 +94,8 @@ export default function Topbar() {
             )
         }
       </div>
-      <div className={`navigationDrawer ${Drawer && "showNavigation"}`}>
+      <div className={`navigationDrawer ${Drawer ? "showNavigation": "hideNavigationDrawer"}`}>
+        {/* <h1 style={{marginTop: "60px", color: "black"}} className={`test ${Drawer ? "showTest": "hideTest"}`}>I'm here for only test purpose:D</h1> */}
         <div className="mobileNavbarHeading">
           <input className={`searchBar mobileSearchBar `} type="text" placeholder="Search..." />
           {

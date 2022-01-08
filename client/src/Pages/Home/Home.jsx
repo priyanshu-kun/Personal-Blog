@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="home">
+      {/* <div className="home">
         <Posts />
         <Sidebar />
-      </div> 
+      </div>  */}
     </div>
   )
 }

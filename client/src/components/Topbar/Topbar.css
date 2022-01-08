@@ -218,6 +218,44 @@
 }
 
 
+
+#searchbar:focus {
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px black ;
+}
+
+.navigationDrawer {
+	width: 100%;
+	height: 220px;
+	position: absolute;
+	top: 60px;	
+	left: 0;
+	/* background-color: red; */
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	/* padding-bottom: 30px;	 */
+	transition: all 0.6s ease;
+	overflow-y: hidden;
+}
+
+
+.navigationDrawer {
+	height: 160px;
+}
+
+
+.showNavigationDrawer {
+	height: 160px;
+	pointer-events: all;
+}
+
+
+.hideNavigationDrawer {
+	height: 0;
+	pointer-events: none;
+}
+
+
+
 .mobileNavbarHeading {
 	width: 100%;
 	display: flex;
@@ -234,6 +272,13 @@
 	opacity: 1;
 	height: 36px;
 	/* margin-top: 20px; */
+}
+
+
+
+.mobileSearchBar:focus {
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px black ;
 }
 
 
@@ -264,27 +309,13 @@
 	object-fit: contain;
 }
 
-#searchbar:focus {
-	border: 1px solid transparent;
-	box-shadow: 0 0 0 2px black ;
+
+
+@media screen and (min-width: 800px) {
+    .navigationDrawer {
+		display: none;
+	}
 }
-
-.navigationDrawer {
-	width: 100%;
-	height: 0px;
-	min-height: 0px;
-	opacity: 0;
-	pointer-events: none;
-	position: absolute;
-	top: 60px;	
-	left: 0;
-	transition: all 0.3s ease;
-}
-
-
-
-
-
 
 @media screen and (max-width: 1080px){
 	.topCenter ul {
@@ -293,6 +324,8 @@
 		max-width: 100%;
 	}
 }
+
+
 
 @media screen and (max-width: 800px){
 
@@ -333,42 +366,43 @@
 		color: #fff;
 		background: rgba(0, 0, 0, 1);
 	}
+	
 	.topLeft  {
 		display: none;
 	}	
+	
 	.top {
 		justify-content: space-around;
 	}
+	
 	.topCenter {
 		flex: 0;
 	}
+	
 	.topRight {
 		/* background-color: orange; */
 		flex: 0;
 	}
+	
 	#searchbar,.searchIcon,.profilePicRapper,.login-btn-ul {
 		display: none !important;
 	}
+	
 	.hamburgerMenu {
 		display: block;
 	}
-	.showNavigation {
-		height: auto;
-		min-height: auto;
-		opacity: 1;
-		pointer-events: all;
-		padding-bottom: 30px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-		/* background: greenyellow; */
-	}
+	
+	
 	.mobileNavbarNavLinks {
 		width: 80%;
 		margin-top: 30px;
 		display: none;
 	}
+	
 	.mobileNavbarNavLinks ul {
 	     width: 100%;	
 	}
+	
 	.mobileNavbarSocialIcons {
 		display: flex;
 		margin: 10px auto;
@@ -376,8 +410,23 @@
 		cursor: pointer;
 		justify-content: space-around;
 	}
-}
+	
+	.navigationDrawer {
+		height: 160px;
+	}
 
+
+	.showNavigationDrawer {
+		height: 160px;
+		pointer-events: all;
+	}
+
+
+	.hideNavigationDrawer {
+		height: 0;
+		pointer-events: none;
+	}
+}
 
 @media screen and (max-width: 460px){
 	.top {
@@ -387,18 +436,30 @@
 		display: none;
 	}
 
-	.showNavigation {
-		height: auto;
-		min-height: auto;
-		opacity: 1;
-		pointer-events: all;
-		padding-bottom: 30px;
-	}
+	
 	.mobileNavbarNavLinks {
 		width: 360px;
 		display: block;
 	}
+
+	.navigationDrawer {
+		height: 220px;
+	}
+
+
+	.showNavigationDrawer {
+		height: 220px;
+		pointer-events: all;
+	}
+
+
+	.hideNavigationDrawer {
+		height: 0;
+		pointer-events: none;
+	}
 }
+
+
 
 
 @media screen and (max-width: 360px) {
@@ -428,4 +489,26 @@
 	.mobileNavbarHeading .mobileSearchBar {
 		margin: 0;
 	}
+	
+	.navigationDrawer {
+		height: 540px;
+	}
+
+
+	.showNavigationDrawer {
+		height: 540px;
+		pointer-events: all;
+	}
+
+
+	.hideNavigationDrawer {
+		height: 0;
+		pointer-events: none;
+	}
+
 }
+
+
+
+
+
