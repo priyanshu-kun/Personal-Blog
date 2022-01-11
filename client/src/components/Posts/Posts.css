@@ -8,7 +8,7 @@
 
 .posts > h1 {
     font-size: 2rem;
-    margin: 60px 0;
+    margin: 60px 0 60px 0;
     font-weight: 900;
     text-align: center;
     text-decoration: underline;
@@ -24,6 +24,23 @@
 }
 
 
+
+.showSidebarItem {
+    display: none;
+    margin-top: 0;
+    max-width: 660px;
+    /* background-color: red; */
+    margin: 0 auto 30px auto;
+}
+
+
+.showSidebarItem .sidebarListItem {
+    padding: 10px 0;
+    font-size: 0.8rem;
+    margin-bottom: -6px;
+}
+
+
 @media screen and (max-width: 1200px) {
      
     .post-container {
@@ -32,6 +49,14 @@
 }
 
 
+@media screen and (max-width: 1000px) {
+    .showSidebarItem {
+        display: block;
+    }
+    .posts > h1 {
+        margin: 30px 0 0 0;
+    }
+}
 
 @media screen and (max-width: 800px) {
     .posts {
@@ -39,7 +64,6 @@
     }
     .posts > h1 {
         font-size: 1.6rem;
-        margin: 30px 0;
     }
     .post-container {
         grid-template-columns:  repeat(1, minmax(300px, 1fr));
@@ -51,7 +75,24 @@
 @media screen and (max-width: 600px) {
     .posts > h1 {
         font-size: 1.2rem;
-        margin: 20px auto;
+        margin: 20px auto 0 auto;
         width: 80%;
+        line-height: 1.5rem;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .showSidebarItem {
+        margin-bottom: 30px;
+        max-width: 460px;
+    }
+
+    .showSidebarItem .sidebarListItem {
+        padding: 10px 0;
+        font-size: 0.6rem;
     }
 }

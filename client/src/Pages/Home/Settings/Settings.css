@@ -26,7 +26,8 @@
 
 .settingContent {
 	width: 400px;
-	min-height: 430px;
+    height: 420px;
+	/* min-height: 430px; */
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background: rgb(248, 248, 248);
 	border-radius: 10px;
@@ -250,4 +251,41 @@
 
 .updateProfile:hover {
     background: rgb(49, 49, 49);
+}
+
+
+
+@media screen and (max-width: 800px) {
+    
+    .settingContent {
+        width: 420px;
+    }
+    
+    .activeEditFields {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        transition: height 0.3s ease;
+        margin-bottom: 30px;
+    }
+    .deactiveEditFields {
+        height: 420px;
+        display: block;
+        transition: height 0.3s ease;
+    }
+    
+    .editFields input {
+        font-size: 0.8rem;
+    }
+    .updateProfile {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    .settingContent {
+        width: 320px;
+    }
 }
