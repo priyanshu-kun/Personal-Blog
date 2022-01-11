@@ -13,7 +13,7 @@ export default function Header() {
           <span className="icon-down"><img src={IconDown} alt="icon down" /></span>
         </div>
         <div className="header-style-image">
-          <p>
+<p>
             "A reader lives thousand lives before dies, The man who never reads lives only one."
           </p>
           <img src={HeaderImage} alt="Header image" />
