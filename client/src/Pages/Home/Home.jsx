@@ -7,11 +7,11 @@ import "./Home.css";
 export default function Home() {
   return (
     <div>
-      <Header />
-      {/* <div className="home">
+      {/* <Header /> */}
+      <div className="home">
         <Posts />
         <Sidebar />
-      </div>  */}
+      </div> 
     </div>
   )
 }
