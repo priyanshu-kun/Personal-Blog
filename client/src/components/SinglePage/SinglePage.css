@@ -5,12 +5,15 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
 .timeAndShareLinks {
    margin: 30px 0;
-   width: 1000px;
+   width: 100%;
+   max-width: 1000px;
    display: flex;
    justify-content: space-between;
 }
@@ -37,22 +40,22 @@
 
 
 .postBanner {
-    width: 1000px;
-    height: 600px;
+    width: 90%;
+    height: auto;
     border-radius: 20px;
 }
 
 .postBanner img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     border-radius: 20px;
 }
 
 
 .contentSection {
-    width: 1000px;
-    margin-top: 30px;
+    width: 90%;
+    /* margin-top: 30px; */
 }
 
 
@@ -110,4 +113,99 @@
 
 .postActions button:hover {
     opacity: 0.3;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    
+    .postBanner img {
+        height: 600px;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .postBanner img {
+        height: 350px;
+    }
+    .contentSection h1 {
+        font-size: 1.6rem;
+        margin-top: 30px;
+    }
+
+
+
+    .contentSection p {
+        margin-top: 20px;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        word-spacing: 1px;
+        /* font-family: sans-serif; */
+        /* letter-spacing: 1px; */
+    }
+    .post-footer {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .postBanner img {
+        height: 200px;
+    }
+    .contentSection h1 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+
+    .contentSection p {
+
+        text-align: center;
+    }
+
+    .timeAndShareLinks span:first-child {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+
+    .timeAndShareLinks {
+        margin: 20px 0;
+    }
+
+
+
+    .timeAndShareLinks span:first-child span:nth-child(2) {
+        font-size: 0.6rem;
+        opacity: 0.6;
+        margin-left: 2px;
+    }
+
+
+    .postTagsList {
+        /* background-color: red;display: flex; */
+        margin: inherit auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .postTagsList span {
+        padding: 2px 6px;
+        border-radius: 50px;
+        font-size: 0.6rem;
+    }
+
+    .postActions button  {
+        margin-right: 0px !important;
+    }
+    
+    .postActions button img {
+        width: 16px;
+        height: 16px;
+    }
 }

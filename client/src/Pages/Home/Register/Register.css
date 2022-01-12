@@ -13,6 +13,8 @@
     flex-direction: column;
     height: 500px;
     width: 500px;
+    min-width: 300px;
+    margin: 0 30px;
     /* background: blue; */
     justify-content: center;
     align-items: center;
@@ -99,5 +101,37 @@
 .linkToDffAuthScreen {
     font-size: 0.8rem;
     margin-top: 10px;
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+    .formWrapper {
+        height: 400px !important;
+    }
+    .loginForm form label {
+        font-size: 0.6rem;
+    }
+
+    .loginForm form input {
+        height: 50px !important;
+        margin-bottom: 10px !important;
+        padding-left: 20px !important;
+        font-size: 0.8rem !important;
+    }
+    .submitFormBtn {
+        height: 50px !important;
+        font-size: 0.8rem !important;
+        margin: 5px auto 0 auto !important;
+
+    }
+    .linkToDffAuthScreen {
+        font-size: 0.6rem !important;
+        margin-top: 10px !important;
+
+    }
 
 }

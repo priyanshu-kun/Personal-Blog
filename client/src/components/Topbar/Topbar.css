@@ -507,6 +507,11 @@
 		pointer-events: none;
 	}
 
+
+	 .loginBtn {
+		margin-bottom: 10px;
+	}
+
 }
 
 

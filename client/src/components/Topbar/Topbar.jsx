@@ -26,7 +26,7 @@ export default function Topbar() {
     setDrawer(!Drawer)
   }
 
-  let user = true;
+  let user = false;
 
   return (
     <div className="top">

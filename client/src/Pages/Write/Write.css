@@ -21,6 +21,7 @@
 .writeActionsBtns {
     display: flex;
     justify-content: space-between;
+    margin: 0 20px;
 
 }
 
@@ -84,6 +85,7 @@
     font-family: 'MetaSerifPro';
     resize: none;
     font-size: 1.2rem;
+    /* background-color: red; */
     padding: 10px 0 0 30px;
     outline: none;
 }
@@ -164,7 +166,17 @@
 
 .postBannerCover {
     position: relative;
+    /* background-color: red; */
+    width: 90%;
+    height: 500px;
+    margin: 0 auto 30px auto;
+}
+
+
+.postBannerCover img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .postBannerCover button {
@@ -174,11 +186,30 @@
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 1);
+    background: rgb(255, 255, 255);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     border: 1px solid black;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .publishAndDiscard {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    }
+    .write h1 {
+        font-size: 1.3rem;
+    }
 }
