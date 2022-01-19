@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 require("./DB/connect.db");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
@@ -8,9 +9,11 @@ const categoryRoutes = require("./routes/category.route");
 const {urlencoded, json} = require("express");
 const app = express();
 const multer = require("multer");
+
 dotenv.config();
 app.use(json());
 app.use(urlencoded({extended: false}));
+app.use("/images", express.static(path.join(__dirname, "/images")))
 
 
 const storage = multer.diskStorage({

@@ -7,47 +7,30 @@ import Settings from "./Pages/Home/Settings/Settings"
 import Login from './Pages/Home/Login/Login';
 import Register from './Pages/Home/Register/Register';
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
+import {useContext} from "react"
+import {Context} from "./context/Context"
 
 function App() {
-  const user = true;
+
+  const {user} = useContext(Context);
 
   return (
-    <Router>
+    <BrowserRouter>
         <Topbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/register">
-            {
-              user ? <Home /> : <Register />
-            }
-          </Route>
-          <Route path="/login">
-            {
-              user ? <Home /> : <Login />
-            }
-          </Route>
-          <Route path="/write">
-            {
-              user ? <Write /> : <Login />
-            }
-          </Route>
-          <Route path="/settings">
-            {
-              user ? <Settings /> : <Login />
-            }
-          </Route>
-          <Route path="/post/:post_id">
-            <Single/>
-          </Route>
-        </Switch>
-    </Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/register" element={user ? <Home /> : <Register />}/>
+          <Route path="/login" element={user ? <Home /> : <Login />} />
+          <Route path="/write" element={user ? <Write /> : <Login />} />
+          <Route path="/settings" element={user ? <Settings /> : <Login />} />
+          <Route path="/post/:post_id" element={<Single/>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

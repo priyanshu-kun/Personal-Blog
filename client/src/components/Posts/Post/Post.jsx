@@ -1,22 +1,36 @@
 import "./Post.css";
 import {Link} from "react-router-dom"
 
-function Post() {
+function Post({post}) {
+
+    const PE = "http://localhost:5000/images/"
+
+    console.log(post)
+    function trimParagraph(str) {
+        let maxLength = 150;
+        let trimmedString = str.substr(0, maxLength);
+        trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+        return trimmedString;
+    }
+
     return (
-        <Link to="/post/1" className="Post">
-           <img src="https://images.pexels.com/photos/10484063/pexels-photo-10484063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post title image" /> 
+        <Link to={`/post/${post._id}`} className="Post">
+            <img src={PE + post.photo} alt="Post title image" /> 
            <div className="postInfo">
                <div className="postCate">
-                  <span>Music</span> 
-                  <span>C++</span>
+                   {
+                       post.categories.map((c) => (
+                          <span>{c.name}</span> 
+                       ))
+                   }
                </div>
                <div className="postContent">
-                   <h1>😊 How to ace in life?</h1>
+                   <h1>😊 {post.title}</h1>
                    <hr style={{margin: "0 0 10px 0", width: "100%"}} />
-                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio officia eligendi esse neque? Sequi, consequatur?</p> 
+                  <p>{trimParagraph(post.desc)+"..."}</p> 
                </div>
                <div className="postDate">
-               📆 <span>1 Jan 2022</span> 
+               📆 <span>{new Date(post.createdAt).toDateString()}</span> 
                </div>
            </div>
         </Link>

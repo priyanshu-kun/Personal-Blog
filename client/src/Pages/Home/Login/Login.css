@@ -93,6 +93,12 @@
 }
 
 
+.submitFormBtn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+
 .submitFormBtn:hover {
     background: rgb(49, 49, 49);
 }

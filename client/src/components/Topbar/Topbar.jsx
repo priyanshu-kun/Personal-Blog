@@ -10,10 +10,15 @@ import ProfilePic from "../../assets/images/images.jpeg"
 import { Link } from "react-router-dom"
 import "./Topbar.css"
 
+import {useContext} from "react"
+import {Context} from "../../context/Context"
+
+
 
 export default function Topbar() {
 
 
+  const {user, dispatch} = useContext(Context);
   const [SearchBar, setSearchBar] = useState(false);
   const [Drawer, setDrawer] = useState(false);
 
@@ -26,7 +31,11 @@ export default function Topbar() {
     setDrawer(!Drawer)
   }
 
-  let user = true;
+
+  function handleLogout() {
+    dispatch({type: "LOGOUT"});
+  }
+
 
   return (
     <div className="top">
@@ -63,7 +72,7 @@ export default function Topbar() {
           <li className="topListItem">
             {
               user && (
-                <button className="logout">Log out</button>
+                <button onClick={handleLogout}  className="logout">Log out</button>
               )
             }
           </li>
@@ -149,7 +158,7 @@ export default function Topbar() {
             <li className="topListItem">
               {
                 user && (
-                  <button className="logout">Log out</button>
+                  <button  onClick={handleLogout}  className="logout">Log out</button>
                 )
               }
             </li>

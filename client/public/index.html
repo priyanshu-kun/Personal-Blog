@@ -30,5 +30,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      var docWidth = document.documentElement.offsetWidth;
+
+      [].forEach.call(
+        document.querySelectorAll('*'),
+        function(el) {
+          if (el.offsetWidth > docWidth) {
+            console.log(el);
+          }
+        }
+      );
+    </script>
   </body>
 </html>
