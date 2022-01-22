@@ -21,6 +21,7 @@ export default function Topbar() {
   const {user, dispatch} = useContext(Context);
   const [SearchBar, setSearchBar] = useState(false);
   const [Drawer, setDrawer] = useState(false);
+  const PE = "http://localhost:5000/images/"
 
   function handleSearchBar() {
     setSearchBar(!SearchBar);
@@ -87,7 +88,7 @@ export default function Topbar() {
           user ? (
             <div className="profilePicRapper" >
               <Link to="/settings">
-                <img className="profilePic" src={ProfilePic} alt="profile" />
+                <img className="profilePic" src={user.profilePic=== ""? PE+"default.png" : PE+user.profilePic} alt="profile" />
               </Link>
             </div>
           )
@@ -111,7 +112,7 @@ export default function Topbar() {
             user ? (
               <div className="mobileProfileRappper" >
                 <Link to="/settings">
-                  <img className="profilePic" src={ProfilePic} alt="profile" />
+                  <img className="profilePic" src={user.profilePic=== ""? PE+"default.png" : PE+user.profilePic} alt="profile" />
                 </Link>
               </div>
             )

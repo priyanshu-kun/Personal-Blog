@@ -35,6 +35,9 @@
 
 
 
+
+
+
 .displayProfile {
     flex: 1;
     height: 100%;
@@ -53,16 +56,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
+    border: 6px solid black;
+    overflow: hidden;
+    position: relative;
 }
 
 .displayProfile img {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
+    width: 110%;
+    height: 110%;
     object-fit: cover;
 }
 
+
+.custom-file-upload-2 {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: 'MetaSerifPro';
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
 
 .displayProfile .username {
     font-weight: 900;
@@ -145,7 +167,7 @@
     border-radius: 6px;
     padding: 0 15px;
     outline: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'MetaSerifPro';
 }
 

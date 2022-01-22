@@ -26,3 +26,26 @@ export const Logout = () => {
     type: "LOGOUT"
   }
 }
+
+
+
+export const updateStart = (userCreadentials) => {
+  return {
+    type: "UPDATE_START"
+  }
+}
+
+
+export const updateSuccess = (user) => {
+    return {
+      type: "UPDATE_SUCCESS",
+      payload: user
+    }
+}
+
+
+export const updateFailure = () => {
+  return {
+    type: "UPDATE_FAILURE"
+  }
+}

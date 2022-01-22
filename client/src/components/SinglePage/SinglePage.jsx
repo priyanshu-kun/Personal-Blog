@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useContext, useState} from "react"
 import "./SinglePage.css"
 import Edit from "../../assets/icons/edit.svg"
 import HorizontalDots from "../../assets/icons/more-horizontal.svg"
@@ -6,13 +6,24 @@ import Trash from "../../assets/icons/trash-2.svg"
 import {Link, useParams} from 'react-router-dom'
 import {useEffect} from "react"
 import axios from "axios"
+import { Context } from "../../context/Context"
+
+const initialState = {
+    title: "",
+    desc: ""
+}
 
 function SinglePage() {
 
+    const {user} = useContext(Context)
     const PE = "http://localhost:5000/images/"
-
     const {post_id} = useParams();
     const [post, setPost] = useState({});
+    const [postUpdate, setPostUpdate] = useState(initialState);
+    const [isUpdated, setIsUpdated] = useState({
+      flag: false,
+      post_id: ""
+    });
 
     useEffect(() => {
         const getPost = async () => {
@@ -23,15 +34,53 @@ function SinglePage() {
         getPost();
     }, [post_id])
 
+
+    useEffect(() => {
+        localStorage.setItem("isUpdated", JSON.stringify(isUpdated))
+    },[isUpdated])
+
+
+    const handleDelete = async () => {
+        try {
+            console.log(post_id, user?.username)
+            await axios.delete("/post/"+post_id, {
+                data: {
+                    username: user?.username
+                }
+            });
+            window.location.replace("/")
+        }
+        catch(e) {
+            console.log(e.message);
+        }
+    }
+
+
+    const setUpdateMode = async () => {
+         await setIsUpdated({
+                flag: true,
+                post_id
+            });
+
+        window.location.replace("/write")
+    }
+
+
+
     return (
         <div className="SinglePage">
             <div className="timeAndShareLinks">
                 <span><Link to={`/?user=${post.username}`}>{post.username},</Link>{new Date(post.createdAt).toDateString()}<span>8 min to read</span></span> 
-                <div className="postActions">
-                    <button><img src={Edit} alt="edit icon" /></button>
-                    <button><img src={Trash} alt="Trash" /></button>
-                    <button><img src={HorizontalDots} alt="Horizontal menu" /></button>
-                </div>
+
+                {
+                    user?.username == post.username && (
+                        <div className="postActions">
+                            <button onClick={setUpdateMode}><img src={Edit} alt="edit icon" /></button>
+                            <button onClick={handleDelete} ><img src={Trash} alt="Trash" /></button>
+                            {/* <button><img src={HorizontalDots} alt="Horizontal menu" /></button> */}
+                        </div>
+                    )
+                }
             </div>
             <div className="postBanner">
                 <img src={PE + post.photo} alt="post banner" />
